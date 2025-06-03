@@ -1,7 +1,7 @@
 
 // https://github.com/mabdullahjs/React-BoilerPlate/blob/master/src/config/Firebase/firebaseMethod.js
 
-import { onAuthStateChanged, signOut, sendSignInLinkToEmail  } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-auth.js";
+import { onAuthStateChanged, signOut, sendSignInLinkToEmail } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-auth.js";
 import { auth, db } from "../Firebase/config.js";
 import { collection, addDoc, getDocs, Timestamp, query, orderBy } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore.js";
 
@@ -42,6 +42,7 @@ const getDataFromFirestore = async () => {
         arr.push({...doc.data(), docId: doc.id});
     });
     console.log(arr);
+    console.log(auth.currentUser.email);
     card.innerHTML = "";
     arr.map((item) => {
         card.innerHTML += `
@@ -92,10 +93,11 @@ form.addEventListener('submit', async (event) => {
 
 
 
+
 const emailButton = document.querySelector('#email-button');
 
 // emailButton.addEventListener('click', () => {
-//     sendSignInLinkToEmail(auth, email, actionCodeSettings)
+//     sendSignInLinkToEmail(auth, auth.currentUser.email, actionCodeSettings)
 //     .then(() => {
 //         // The link was successfully sent. Inform the user.
 //         // Save the email locally so you don't need to ask the user for it again
@@ -110,3 +112,5 @@ const emailButton = document.querySelector('#email-button');
 //     });
 // });
 
+// media library
+// cloudinary
