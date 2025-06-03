@@ -1,7 +1,7 @@
 
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-auth.js";
 import { collection, addDoc, Timestamp } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore.js";
-import { auth, db } from "../Firebase/config.js";
+import { auth, db } from "./Firebase/config.js";
 
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
