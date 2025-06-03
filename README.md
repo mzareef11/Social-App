@@ -1,2 +1,2 @@
 # Social-App
-Share, Connect, and Engage – All in One Place!
+Share, Connect, and Engage – All in One Place! | Firebase
